@@ -156,19 +156,21 @@ Use the removeFlavorByName function below to do the following:
 */
 
 //2 param array, index
-function removeFlavorByName(array, index){
-  for(let i = 0; i < array.length; i++){
-    
+function removeFlavorByName(array, item){
+  for(let i = 0; i < array.length; i++){  
+    if(array[i] === item){
+      array.splice(i, 1); 
+    }
   }
   //loop through the array
   //write a conditional that checks to see if the index matches the given flavor
   //if it does remove it
   //return the array
-
+return array;
   //look at guided project 'function removeItem'
 }
 
-
+console.log('Task 6', removeFlavorByName(originalFlavors, "Rocky Road"));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -191,12 +193,19 @@ Use the filterByWord function below to do the following:
 */
 
 //2 param array, string
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+  let filteredArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].includes(string)){
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
   //create a newArray called filteredArray to push my values to
   //loop through the original array and check 
 }
 
+console.log('Task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 

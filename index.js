@@ -65,11 +65,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 //1 parameter array
 function is31Flavors(array){
- /*your code here*/
+ if(array.length === 31){
+   return true;
+ }else{
+   return false;
+ }
  //we want to check to see that the length of the array is equal to 31
  //if it is we return true
  //else we return false
 }
+
+console.log('Task 2', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -84,12 +90,14 @@ Use the addFlavor function below to do the following:
 */
 
 //two parameters, array, flavor
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, flavor){
+  array.unshift(flavor);
+  return array;
  //use unshift to add the flavor to the front of the array
  //return the array
 }
 
+console.log('Task 3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -103,13 +111,14 @@ Use the removeLastFlavor function below to do the following:
 */
 
 //1 param array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+ array.pop();
+ return array;
  //use pop to remove the last item
  //return the array
 }
 
-
+console.log('Task 4', removeLastFlavor(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -123,11 +132,13 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 //2 param array, index
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, index){
+ let flavor = array[index];
+ return flavor;
   //for example if i passed in orginial flavors and 2 I would want to return originalFlavors[2];
 }
 
+console.log('Task 5', getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -145,8 +156,10 @@ Use the removeFlavorByName function below to do the following:
 */
 
 //2 param array, index
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, index){
+  for(let i = 0; i < array.length; i++){
+    
+  }
   //loop through the array
   //write a conditional that checks to see if the index matches the given flavor
   //if it does remove it
